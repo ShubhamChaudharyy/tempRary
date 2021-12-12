@@ -1,0 +1,59 @@
+.LCM-outer-container{
+    width: 20vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: fixed;
+}
+
+.LCM-inner-container{
+    width: 90%;
+    height: 90%;
+    background-color: #404048;
+    border-radius: 25px;
+}
+
+.LCM-heading{
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LCM-heading h1{
+    font-size: 1.4rem;
+    color: white;
+}
+
+.LCM-list{
+    /* border: 1px solid rgb(168, 168, 168); */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.LCM-list li{
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    border-radius: 10px;
+    height: 3.1rem;
+    width: 80%;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 0.95rem;
+}
+
+.LCM-list li.select{
+    background-color: #E43270;
+}
+
+.LCM-list li:not(.select):hover{
+    background-color: #535358;
+}

@@ -1,0 +1,21 @@
+.machine-outer{
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20vw;
+    margin-top: 3rem;
+}
+.machine-inner{
+    background-color: #F0F2F5;
+    width: 95%;
+    height: 100vh;
+    border-radius: 20px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.machine-inner input{
+    margin-top: 2rem;
+}

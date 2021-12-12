@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:500&display=swap');
+
+  
+.outer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 20px;
+  width: 300px;
+  border: 5px solid lighten(#2f416d, 10);
+  border-radius: 50px;
+  background: #2e86de;
+}
+
+.inner{
+  position: absolute;
+  top: 1px;
+  height: 19px;
+  width: 250px;
+  background: #ee5253;
+  border-radius: 25px;
+  transition: width 100ms ease-out;
+}
+  

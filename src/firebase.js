@@ -59,7 +59,7 @@ class FirebaseClass {
     return tempData;
   }
 
-  storeImage = (file, cb,userId) => {
+  storeImage = (file, cb,userId,reportType) => {
     const storage = getStorage();
     const storageRef = storeRef(storage, `${file.name}`);
     const uploadTask = uploadBytesResumable(storageRef, file);
@@ -77,20 +77,21 @@ class FirebaseClass {
       () => {
         // Handle successful uploads on complete
         getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
-          await this.saveUserData(userId,downloadURL,file.name,file.name.split('.').pop());
+          await this.saveUserData(userId,downloadURL,file.name,file.name.split('.').pop(),reportType);
           cb(downloadURL, file.name);
         });
       }
     );
   };
 
-  saveUserData = (Id,url,name,format) => {
+  saveUserData = (Id,url,name,format,type) => {
     const newId = push(child(dbRef(this.db),'reports')).key
     set(dbRef(this.db,`reports/${Id}/` + newId),{
       url,
       name,
       result : 'No Diagnosis',
       format,
+      type,
     })
   }
 

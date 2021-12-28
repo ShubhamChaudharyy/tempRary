@@ -49,3 +49,16 @@
   margin-top: 2rem;
 }
 
+.neg-res {
+  background-color: green;
+  color: white;
+  display: flex;
+    padding: 1rem;
+}
+
+.pos-res {
+  background-color: red;
+  color: white;
+  display: flex;
+    padding: 1rem;
+}
